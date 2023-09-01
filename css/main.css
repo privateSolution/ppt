@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+
+  font-family: Arial, Helvetica, sans-serif;
+
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: rgb(20, 20, 20);
+  --color2: rgb(40, 40, 40);
+  --color3: rgb(60, 60, 60);
+  --color4: rgb(80, 80, 80);
+  --color5: rgb(100, 100, 100);
+  --color6: rgb(240, 240, 240);
+  --color7: rgb(42, 211, 0);
+  --color8: rgb(26, 129, 0);
+  --color9: #fff159;
+  --color10: #ffea00;
+  --color11: #afa100;
+  --color12: rgb(255, 52, 52);
+  --color13: rgb(255, 0, 0);
+  --color14: rgb(180, 0, 0);
+  --color15: rgb(103, 58, 183);
+  --color16: rgb(76, 19, 175);
+  --color17: rgb(51, 8, 124);
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  background-color: black;
+  color: white;
+
+  overflow: hidden;
+}
+
+nav {
+  position: fixed;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 100vh;
+
+  z-index: 999;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  min-height: 100vh;
+}
+
+nav ul li {
+  display: flex;
+  width: 0.3vw;
+  height: 8vh;
+  background-color: var(--color7);
+  color: transparent;
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+nav ul #sauronLi {
+  background-color: var(--color10);
+}
+
+nav ul #outgoingLi {
+  background-color: var(--color15);
+}
+
+nav ul #arvoreLi {
+  background-color: var(--color13);
+}
+
+nav ul #nav8 {
+  background-color: var(--color15);
+  border-color: var(--color16);
+}
+
+nav ul #nav9 {
+  background-color: var(--color13);
+  border-color: var(--color13);
+}
+
+nav ul #nav10 {
+  background-color: var(--color10);
+  color: var(--color3);
+  border-color: var(--color11);
+}
+
+nav:hover ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 7vw;
+  background-color: var(--color1);
+  color: var(--color6);
+  border-right: 5px solid;
+  border-color: var(--color7);
+}
+
+nav:hover ul #outgoingLi {
+  background-color: var(--color15);
+  border-color: var(--color16);
+}
+
+nav:hover ul #arvoreLi {
+  border-color: var(--color14);
+}
+
+nav:hover ul #sauronLi {
+  background-color: var(--color10);
+  color: var(--color3);
+  border-color: var(--color11);
+}
+
+nav ul li a {
+  display: none;
+}
+
+nav ul li:hover {
+  width: 23vw;
+  background-color: var(--color1);
+}
+
+nav ul li:hover span {
+  display: none;
+}
+
+nav ul li:hover a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 23vw;
+  height: 8vh;
+  background-color: var(--color1);
+  color: var(--color6);
+  border-right: 5px solid;
+  border-color: var(--color7);
+}
+
+#frame1,
+#frame2,
+#frame3,
+#frame4,
+#frame5,
+#frame6,
+#frame7,
+#frame8,
+#frame9,
+#frame10,
+#frame11 {
+  position: relative;
+  min-width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+#frame8 {
+  display: flex;
+  flex-direction: row;
+}
+
+#frame8 #produ {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+
+  width: 34vw;
+  min-height: 100vh;
+  background-color: var(--color15);
+  overflow: hidden;
+}
+
+#frame8 #produ #titlee {
+  font-size: 25px;
+  padding: 1rem;
+}
+
+#frame8 #produ #produInput {
+  padding: 1rem;
+  text-align: center;
+  width: 33vw;
+}
+
+#frame8 #produ #register,
+#frame8 #produ #clear {
+  padding: 1rem;
+  margin: 1px;
+  width: 16.5vw;
+}
+
+#frame8 #produ #produInput::placeholder {}
+
+#frame8 #produ #produCasos {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: column;
+
+  width: 33vw;
+  min-height: 65vh;
+  background-color: var(--color1);
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+#frame8 #produ #produCasos p {
+  padding: 0.2rem;
+  margin: 1px;
+  background-color: var(--color2);
+  text-align: center;
+  width: 32.9vw;
+}
+
+#frame8 #frame8frame {
+  width: 33vw;
+  min-height: 100vh;
+}
+
+#frame8 #frame8extra {
+  width: 33vw;
+  min-height: 100vh;
+}
+
+#frame8 div {
+  width: 50vw;
+  min-height: 100vh;
+}
+
+/* Arvore de transferencia */
+#frame9 {
+  position: absolute;
+  left: 0vw;
+  top: 0vh;
+  transform: scale(0.9);
+  min-width: 110vw;
+  min-height: 110vw;
+}
+
+#frame10 input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.9rem;
+  text-align: center;
+  font-size: 1em;
+  width: 100vw;
+  z-index: 50;
+}
+
+#frame10 iframe {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* TESTES */
+#frame9div {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+#frame9 {
+  min-width: 115vw;
+  min-height: 115vh;
+  transform: scale(.9);
+}
